@@ -1,9 +1,10 @@
 const inquirer  = require("inquirer");
 const { writeFile } = require('fs').promises;
-const generateHTML = require("./src/generateHTML.js");
-// const generateManager = require("./src/generateManager.js");
-// const generateEngineer = require("./src/generateEngineer.js");
-// const generateIntern = require("./src/generateIntern.js");
+const fs =require('fs');
+const generateManager = require("./src/generateManager.js");
+const generateEngineer = require("./src/generateEngineer.js");
+const generateIntern = require("./src/generateIntern.js");
+const generateFooter = require("./src/generateFooter.js");
 
  const Manager = require("./lib/Manager.js");
  const Engineer = require("./lib/Engineer.js");
@@ -142,11 +143,8 @@ const promptManager = () => {
         const { name, id, email, officeNumber,member} = data;
     
         const manager= new Manager(name, id, email, officeNumber,"Manager");
-        // writeFile('index.html', generateHeader())
-            writeFile('index.html', generateHTML(manager))
-        // console.log(manager);
+          writeFile('index.html', generateManager(manager))
         choice = member;
-        // console.log(choice);      
         }
       )
       .then(() => {
@@ -155,7 +153,7 @@ const promptManager = () => {
         }else if(choice =="Engineer"){
          printEngineer();
         }else{
-        // generateFooter();
+          fs.appendFileSync('index.html', generateFooter())
         }          
       })
 
@@ -167,10 +165,8 @@ const promptManager = () => {
                 .then((data) => {
                  const { name, id, email, github,member} = data;
                  const engineer=new Engineer(name, id, email, github,"Engineer");
-                 writeFile('index.html', generateHTML(engineer))
+                 fs.appendFileSync('index.html', generateEngineer(engineer))
                  choice = member;
-                // console.log(engineer);
-                // console.log(member);         
                 } )  
                 .then(() => {
                   if(choice=="Intern") {
@@ -178,7 +174,7 @@ const promptManager = () => {
                   }else if(choice=="Engineer") {
                     printEngineer();
                   }else{
-                  //  generateFooter();
+                    fs.appendFileSync('index.html', generateFooter())
                   }      
                 })    
   }
@@ -188,10 +184,8 @@ const promptManager = () => {
            .then((data) => {
             const { name, id, email, school,member} = data;
             const intern = new Intern(name, id, email, school,"Intern");
-               writeFile('index.html', generateHTML(intern))
-            choice = member;
-          //  console.log(intern);
-          //  console.log(member);         
+            fs.appendFileSync('index.html', generateIntern(intern))
+            choice = member;  
            } )  
            .then(() => {
              if(choice=="Intern") {
@@ -199,8 +193,8 @@ const promptManager = () => {
              }else if(choice =="Engineer"){
               printEngineer();
              }else{
-            //  generateFooter();
-             }       
+              fs.appendFileSync('index.html', generateFooter())             
+            }       
            })    
 }
 
