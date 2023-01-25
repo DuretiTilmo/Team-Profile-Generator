@@ -39,6 +39,12 @@ const promptManager = () => {
       type: 'input',
       name: 'email',
       message: 'What is the team manager\'s email?',
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else
+        return "Please enter team manager\'s email?";
+      }
     },
     {
       type: 'input',
@@ -72,7 +78,7 @@ const promptManager = () => {
         if (value) {
           return true;
         } else
-        return "Please enter team engineer\'s name?";
+        return "Please enter the engineer\'s name?";
       }
     },
     {
@@ -90,11 +96,23 @@ const promptManager = () => {
       type: 'input',
       name: 'email',
       message: 'What is the engineer\'s email?',
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else
+        return "Please enter the engineer\'s email?";
+      }
     },
     {
       type: 'input',
       name: 'github',
       message: 'What is the engineer\'s github?',
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else
+        return "Please enter the engineer\'s github?";
+      }
     },
     {
       type: 'list',
@@ -112,21 +130,45 @@ const promptManager = () => {
         type: 'input',
         name: 'name',
         message: 'What is your intern\'s name?',
+        validate: (value) => {
+          if (value) {
+            return true;
+          } else
+          return "Please enter your intern\'s name?";
+        }
       },
       {
         type: 'input',
         name: 'id',
         message: 'What is your intern\'s id?',
+        validate: (value) => {
+          if (isNaN(value)) {
+            return "Please enter a number";
+          }
+          return true;
+        }
       },
       {
         type: 'input',
         name: 'email',
         message: 'What is your intern\'s email?',
+        validate: (value) => {
+          if (value) {
+            return true;
+          } else
+          return "Please enter your intern\'s email?";
+        }
       },
       {
         type: 'input',
         name: 'school',
         message: 'What is your intern\'s school?',
+        validate: (value) => {
+          if (value) {
+            return true;
+          } else
+          return "Please enter your intern\'s school?";
+        }
       },
       {
         type: 'list',
@@ -176,7 +218,8 @@ const promptManager = () => {
                   }else{
                     fs.appendFileSync('./dist/index.html', generateFooter())
                   }      
-                })    
+                })  
+                .catch((err) => console.error(err));    
   }
 
   const printIntern= () => {
@@ -196,6 +239,7 @@ const promptManager = () => {
               fs.appendFileSync('./dist/index.html', generateFooter())             
             }       
            })    
+           .catch((err) => console.error(err));  
 }
 
  init();

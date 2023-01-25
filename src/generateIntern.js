@@ -1,5 +1,5 @@
 function generateIntern(intern) {
-  return `<div class="col-lg-3 col-md-6 col-sm-12">
+  return `<div class="col-lg-4 col-md-6 col-sm-12">
   <div class="card intern">
  <div class="card-header">
       <h2>${intern.name} </h2>

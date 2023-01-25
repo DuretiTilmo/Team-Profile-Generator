@@ -2,9 +2,14 @@ header {
   color: white;
   background-color: rgb(100, 48, 150);
   text-align: center;
-  margin: 50px;
-  padding: 20px;
+  margin: 70px;
+  padding: 30px;
   font-size: 20px;
+}
+
+.card {
+  box-shadow: 8px 5px 5px rgb(170, 168, 168);
+  margin-bottom: 10px;
 }
 
 .card-header {
@@ -18,16 +23,17 @@ header {
 
 ul {
   justify-self: center;
-  margin-left: 1px;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .list-item {
   border: 1px solid rgb(201, 197, 197);
+  box-shadow: 2px 2px 2px rgb(214, 214, 214);
   list-style-type: none;
   background-color: white;
-  max-width: 220px;
-  margin: 5px;
+  max-width: 280px;
+  margin: 7px;
   text-align: start;
-  padding: 4px;
+  padding: 5px;
+
 }

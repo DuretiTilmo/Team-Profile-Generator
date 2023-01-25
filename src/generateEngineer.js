@@ -1,6 +1,6 @@
 function generateEngineer(engineer) {
   return `
-  <div class="col-lg-3 col-md-6 col-sm-12">
+  <div class="col-lg-4 col-md-6 col-sm-12">
   <div class="card engineer">
  <div class="card-header">
     <h2>${engineer.name} </h2>
