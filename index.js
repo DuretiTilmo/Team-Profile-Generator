@@ -143,7 +143,7 @@ const promptManager = () => {
         const { name, id, email, officeNumber,member} = data;
     
         const manager= new Manager(name, id, email, officeNumber,"Manager");
-          writeFile('index.html', generateManager(manager))
+          writeFile('./dist/index.html', generateManager(manager))
         choice = member;
         }
       )
@@ -153,7 +153,7 @@ const promptManager = () => {
         }else if(choice =="Engineer"){
          printEngineer();
         }else{
-          fs.appendFileSync('index.html', generateFooter())
+          fs.appendFileSync('./dist/index.html', generateFooter())
         }          
       })
 
@@ -165,7 +165,7 @@ const promptManager = () => {
                 .then((data) => {
                  const { name, id, email, github,member} = data;
                  const engineer=new Engineer(name, id, email, github,"Engineer");
-                 fs.appendFileSync('index.html', generateEngineer(engineer))
+                 fs.appendFileSync('./dist/index.html', generateEngineer(engineer))
                  choice = member;
                 } )  
                 .then(() => {
@@ -174,7 +174,7 @@ const promptManager = () => {
                   }else if(choice=="Engineer") {
                     printEngineer();
                   }else{
-                    fs.appendFileSync('index.html', generateFooter())
+                    fs.appendFileSync('./dist/index.html', generateFooter())
                   }      
                 })    
   }
@@ -184,7 +184,7 @@ const promptManager = () => {
            .then((data) => {
             const { name, id, email, school,member} = data;
             const intern = new Intern(name, id, email, school,"Intern");
-            fs.appendFileSync('index.html', generateIntern(intern))
+            fs.appendFileSync('./dist/index.html', generateIntern(intern))
             choice = member;  
            } )  
            .then(() => {
@@ -193,7 +193,7 @@ const promptManager = () => {
              }else if(choice =="Engineer"){
               printEngineer();
              }else{
-              fs.appendFileSync('index.html', generateFooter())             
+              fs.appendFileSync('./dist/index.html', generateFooter())             
             }       
            })    
 }

@@ -1,0 +1,33 @@
+header {
+  color: white;
+  background-color: rgb(100, 48, 150);
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.card-header {
+  background-color: rgb(127, 101, 151);
+  color: white;
+}
+
+.card-body {
+  background-color: #fcf0fc;
+}
+
+ul {
+  justify-self: center;
+  margin-left: 1px;
+  padding-left: 10px;
+}
+
+.list-item {
+  border: 1px solid rgb(201, 197, 197);
+  list-style-type: none;
+  background-color: white;
+  max-width: 220px;
+  margin: 5px;
+  text-align: start;
+  padding: 4px;
+}
