@@ -10,7 +10,7 @@ function generateEngineer(engineer) {
       <ul>
          <li class = "list-item">ID: ${engineer.id}</li>	
          <li class = "list-item">Email: <span><a href = "mailto:${engineer.email}"> ${engineer.email}</a> </span> </li>
-         <li class = "list-item">Github: <a traget="_blank" href="https://github.com/DuretiTilmo">${engineer.github}</a> </li>
+         <li class = "list-item">Github: <a target="_blank" href="https://github.com/DuretiTilmo">${engineer.github}</a> </li>
        </ul>
    </div>
  </div>

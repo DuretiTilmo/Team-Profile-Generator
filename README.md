@@ -19,7 +19,7 @@ To implement this appliction inquirer package is used to collect input from the 
 ## Screenshots
 ![Generated team profile displayin each team member's specified information on a card](assets/images/Screenshot_20230125_125135.png)
 
----------------------------------------
+![Responses to all of the prompts displayed in the command line](assets/images/Screenshot_20230125_104857.png)
 ## Test 
 
 The application is invoked by using "node index.js" command.
