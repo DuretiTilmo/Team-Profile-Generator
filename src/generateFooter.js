@@ -1,9 +1,9 @@
 function generateFooter() {
-    return ` 
+  return ` 
      </div>
   </div>
   </body>
-</html>  `
+</html>  `;
 }
 
 module.exports = generateFooter;
