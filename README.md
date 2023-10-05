@@ -35,3 +35,6 @@ MIT License
   - Email Address: duretikadir22@gmail.com
  
   - Github Profile: duretitilmo
+
+------------------------------------------
+&copy 2023
